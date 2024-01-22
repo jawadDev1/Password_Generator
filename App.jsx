@@ -58,7 +58,7 @@ export default function App() {
   function createPassword(passString, passwordLength) {
     let result = '';
     for (let i = 0; i < passwordLength; i++) {
-      const characterIndex = Math.round(Math.random() * passwordLength);
+      const characterIndex = Math.round(Math.random() * passString.length);
       result += passString.charAt(characterIndex);
     }
 
@@ -257,4 +257,7 @@ const styles = StyleSheet.create({
     fontSize: 23,
     fontWeight: '700',
   },
+  errorText: {
+    color: 'red',
+  }
 });
